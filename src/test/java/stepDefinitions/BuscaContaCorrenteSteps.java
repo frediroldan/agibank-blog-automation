@@ -3,31 +3,37 @@ package stepDefinitions;
 import io.cucumber.java.pt.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pages.HomePage;
 
 public class BuscaContaCorrenteSteps {
     WebDriver driver = Hooks.driver;
     HomePage homePage;
 
+    private static final Logger logger = LoggerFactory.getLogger(BuscaContaCorrenteSteps.class);
+
     @Dado("que estou na homepage do Blog Agi")
-    public void que_estou_na_homepage_do_blog_agi() {
+    public void estouNaHomepageBlogAgi() {
+        logger.info("Página do Blog Agi acessada com sucesso.");
         homePage = new HomePage(driver);
         homePage.abrirPagina();
     }
 
     @Quando("pesquiso pelo termo {string}")
-    public void pesquiso_pelo_termo(String termo) {
+    public void pesquisoPeloTermo(String termo) {
+        logger.info("Pesquisa pelo termo específico.");
         homePage.clicarLupa();
         homePage.buscarPor(termo);
     }
 
     @Entao("deve retornar artigos sobre Conta Corrente")
-    public void deve_retornar_artigos_sobre_conta_corrente() {
+    public void deveRetornarArtigosSobreContaCorrente() {
         Assert.assertTrue(homePage.encontrouResultados());
     }
 
     @Entao("deve aparecer aviso de pesquisa inválida")
-    public void deve_aparecer_aviso_de_pesquisa_inválida() {
+    public void deveAparecerAvisoPesquisaInvalida() {
         Assert.assertTrue(homePage.exibiuMensagemErro());
     }
 }

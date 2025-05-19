@@ -3,6 +3,8 @@ package stepDefinitions;
 import io.cucumber.java.pt.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import pages.HomePage;
 
 public class BuscaEmprestimoConsignadoSteps {
@@ -10,29 +12,31 @@ public class BuscaEmprestimoConsignadoSteps {
     WebDriver driver = Hooks.driver;
     HomePage home;
 
+    private static final Logger logger = LoggerFactory.getLogger(BuscaEmprestimoConsignadoSteps.class);
+
     @Dado("que estou na página inicial do Blog do Agi")
-    public void que_estou_na_pagina_inicial_do_blog() {
+    public void estouPaginaInicialBlog() {
         home = new HomePage(driver);
         home.abrirPagina();
     }
 
     @Quando("clico na lupa e digito {string}")
-    public void clico_na_lupa_e_digito(String termo) {
+    public void clicoLupaDigito(String termo) {
         home.clicarLupa();
         home.buscarPor(termo);
     }
 
     @Quando("pressiono Enter")
-    public void pressiono_enter() {
+    public void pressionoEnter() {
     }
 
     @E("devo ver uma lista de artigos relacionados ao termo buscado")
-    public void devo_ver_lista_de_artigos() {
+    public void devoVerListaArtigos() {
         Assert.assertTrue(home.encontrouResultados());
     }
 
     @Entao("devo ver uma mensagem indicando que nenhum resultado foi encontrado")
-    public void devo_ver_mensagem_sem_resultado() {
+    public void devoVerMensagemSemResultado() {
         Assert.assertTrue(home.exibiuMensagemErro());
     }
 }

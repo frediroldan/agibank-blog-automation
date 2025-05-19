@@ -10,6 +10,8 @@ public class Hooks {
 
     public static WebDriver driver;
 
+
+
     @Before
     public void setUp() {
         WebDriverManager.chromedriver().setup();
