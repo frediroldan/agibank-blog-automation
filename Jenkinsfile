@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://seurepositorio.com/blogdoagi-tests.git', branch: 'main'
+                git url: 'https://github.com/frediroldan/agibank-blog-automation.git', branch: 'main'
             }
         }
         stage('Build & Test') {
