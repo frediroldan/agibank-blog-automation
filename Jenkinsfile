@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'TAGS', defaultValue: 'Regressivo', description: 'Tags a serem executadas')
+        string(name: 'TAGS', defaultValue: '@Regressivo', description: 'Tags a serem executadas')
     }
 
     tools {
