@@ -13,7 +13,7 @@ public class BuscaEmprestimoConsignadoSteps {
     @Dado("que estou na página inicial do Blog do Agi")
     public void que_estou_na_pagina_inicial_do_blog() {
         home = new HomePage(driver);
-        home.acessarPaginaInicial();
+        home.abrirPagina();
     }
 
     @Quando("clico na lupa e digito {string}")
@@ -28,11 +28,11 @@ public class BuscaEmprestimoConsignadoSteps {
 
     @E("devo ver uma lista de artigos relacionados ao termo buscado")
     public void devo_ver_lista_de_artigos() {
-        Assert.assertTrue(home.resultadoEncontrado());
+        Assert.assertTrue(home.encontrouResultados());
     }
 
     @Entao("devo ver uma mensagem indicando que nenhum resultado foi encontrado")
     public void devo_ver_mensagem_sem_resultado() {
-        Assert.assertTrue(home.exibiuMensagemSemResultados());
+        Assert.assertTrue(home.exibiuMensagemErro());
     }
 }
