@@ -18,8 +18,8 @@ public class BuscaEmprestimoConsignadoSteps {
 
     @Quando("clico na lupa e digito {string}")
     public void clico_na_lupa_e_digito(String termo) {
-        home.clicarNaLupa();
-        home.digitarTermo(termo);
+        home.clicarLupa();
+        home.buscarPor(termo);
     }
 
     @Quando("pressiono Enter")

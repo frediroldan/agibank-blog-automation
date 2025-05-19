@@ -3,6 +3,7 @@
 #Autor: Fredi Roldan
 #Data: 17/05/2025
 
+@Regressivo
 Funcionalidade: Busca por "Empréstimo Consignado" no Blog do Agi
 
   Cenario: Buscar por "Empréstimo Consignado" com resultados

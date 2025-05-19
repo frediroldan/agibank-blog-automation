@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
     features = "src/test/resources/features",
     glue = "stepDefinitions",
-    tags = "@busca or @cartoes or @inss or @conta",
+    tags = "@Regressivo",
     plugin = {
         "pretty",
         "html:target/cucumber-reports.html",

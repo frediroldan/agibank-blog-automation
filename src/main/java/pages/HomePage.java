@@ -26,7 +26,7 @@ public class HomePage {
     @FindBy(css = ".search-no-results")
     private WebElement mensagemErro;
 
-    public void abrirPagina() {
+    public void acessarPaginaInicial() {
         driver.get("https://blogdoagi.com.br/");
     }
 
@@ -39,11 +39,11 @@ public class HomePage {
         campoBusca.submit();
     }
 
-    public boolean encontrouResultados() {
+    public boolean resultadoEncontrado() {
         return !artigos.isEmpty();
     }
 
-    public boolean exibiuMensagemErro() {
+    public boolean exibiuMensagemSemResultados() {
         return mensagemErro.isDisplayed();
     }
 }
