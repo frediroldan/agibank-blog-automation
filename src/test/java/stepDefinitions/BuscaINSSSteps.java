@@ -13,7 +13,7 @@ public class BuscaINSSSteps {
     @Dado("que estou na página do Blog do Agi")
     public void acessarPaginaINSS() {
         homePage = new HomePage(driver);
-        homePage.abrirPagina();
+        homePage.acessarPaginaInicial();
     }
 
     @Quando("pesquiso por {string}")
@@ -24,11 +24,11 @@ public class BuscaINSSSteps {
 
     @E("devo ver artigos relacionados")
     public void verificarArtigosINSS() {
-        Assert.assertTrue(homePage.encontrouResultados());
+        Assert.assertTrue(homePage.resultadoEncontrado());
     }
 
     @Entao("devo ver uma mensagem de erro")
     public void verificarErroINSS() {
-        Assert.assertTrue(homePage.exibiuMensagemErro());
+        Assert.assertTrue(homePage.exibiuMensagemSemResultados());
     }
 }
