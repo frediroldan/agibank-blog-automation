@@ -1,6 +1,6 @@
 # 🧪 Blog do Agi – Projeto de Testes Automatizados (PageFactory + Cucumber)
 
-![Java](https://img.shields.io/badge/Java-11%2B-blue)
+![Java](https://img.shields.io/badge/Java-21%2B-blue)
 ![Maven](https://img.shields.io/badge/Maven-3.9.5-green)
 ![Selenium](https://img.shields.io/badge/Selenium-4.21.0-brightgreen)
 ![Cucumber](https://img.shields.io/badge/Cucumber-7.14.0-yellow)
@@ -11,7 +11,7 @@
 
 Este projeto automatiza testes de regressão da funcionalidade de **busca de artigos** do [Blog do Agi](https://blogdoagi.com.br/), utilizando:
 
-- **Java 11+**
+- **Java 21+**
 - **Selenium WebDriver**
 - **Cucumber com BDD (Gherkin)**
 - **Padrão Page Object + PageFactory**
@@ -33,14 +33,14 @@ blogdoagi-tests/
 
 ## ⚙️ Tecnologias e Versões
 
-| Ferramenta         | Versão     | Descrição                                   |
-|--------------------|------------|---------------------------------------------|
-| Java               | 11+        | Linguagem base                              |
-| Maven              | 3.9.5      | Build automation tool                        |
-| Selenium WebDriver | 4.21.0     | Automação de browser                        |
-| Cucumber           | 7.14.0     | BDD com Gherkin                             |
-| Allure             | 2.24.0     | Relatórios de execução                      |
-| WebDriverManager   | 5.8.0      | Gerenciador automático do driver            |
+| Ferramenta         | Versão | Descrição                                   |
+|--------------------|--------|---------------------------------------------|
+| Java               | 21+    | Linguagem base                              |
+| Maven              | 3.9.5  | Build automation tool                        |
+| Selenium WebDriver | 4.21.0 | Automação de browser                        |
+| Cucumber           | 7.14.0 | BDD com Gherkin                             |
+| Allure             | 2.24.0 | Relatórios de execução                      |
+| WebDriverManager   | 5.8.0  | Gerenciador automático do driver            |
 
 ## 🚀 Execução Local
 
@@ -129,7 +129,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/seurepositorio/blogdoagi-tests.git'
+                git url: 'https://github.com/frediroldan/agibank-blog-automation.git'
             }
         }
         stage('Build & Test') {
@@ -185,12 +185,3 @@ pipeline {
 - ✅ Execução por tags
 - ✅ PageFactory para robustez
 
-## ❓ FAQ
-
-**Q: Por que usar PageFactory e não apenas Page Object?**  
-A PageFactory facilita a manutenção com `@FindBy`, melhora legibilidade e desacopla o código.
-
-**Q: O que fazer se o ChromeDriver não abrir?**  
-Atualize sua versão local de driver ou use o WebDriverManager como no projeto.
-
----
