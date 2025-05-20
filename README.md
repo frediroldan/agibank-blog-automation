@@ -1,7 +1,7 @@
-# 🧪 Blog do Agi – Testes Automatizados (PageFactory + Cucumber)
+## 🧪 Blog do Agi – Testes Automatizados (PageFactory + Cucumber)
 
 
-## 📌 Descrição do Projeto
+### 📌 Descrição do Projeto
 
 Este projeto automatiza testes de regressão da funcionalidade de **busca de artigos** do [Blog do Agi](https://blogdoagi.com.br/), utilizando:
 
@@ -12,7 +12,7 @@ Este projeto automatiza testes de regressão da funcionalidade de **busca de art
 - **Relatórios Cucumber HTML e Allure**
 - **Pipeline Jenkins para CI/CD**
 
-## 📂 Estrutura do Projeto
+### 📂 Estrutura do Projeto
 
 ```
 blogdoagi-tests/
@@ -25,7 +25,7 @@ blogdoagi-tests/
 ├── Jenkinsfile                    → Pipeline CI/CD
 ```
 
-## ⚙️ Tecnologias e Versões
+### ⚙️ Tecnologias e Versões
 
 ![Java](https://img.shields.io/badge/Java-21%2B-blue)
 ![Maven](https://img.shields.io/badge/Maven-3.9.5-green)
@@ -34,7 +34,7 @@ blogdoagi-tests/
 ![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-red)
 ![Allure](https://img.shields.io/badge/Allure-2.24.0-purple)
 
-## 🚀 Execução Local
+### 🚀 Execução Local
 
 ### 1. Clonar o projeto
 
@@ -57,7 +57,7 @@ abrir o arquivo:
 target/cucumber-html-reports/overview-features.html
 ```
 
-### 4. Gerar Allure Report
+#### 4. Gerar Allure Report
 
 ```bash
 allure serve allure-results
@@ -65,7 +65,7 @@ allure serve allure-results
 
 > Certifique-se de ter o [Allure CLI](https://docs.qameta.io/allure/#_installing_a_commandline) instalado.
 
-## ✅ Tags disponíveis para execução
+### ✅ Tags disponíveis para execução
 
 | Tag         | Descrição                              |
 |-------------|----------------------------------------|
@@ -79,7 +79,7 @@ allure serve allure-results
 mvn clean test -Dcucumber.filter.tags="@cartoes"
 ```
 
-## 🧱 Page Object com PageFactory
+### 🧱 Page Object com PageFactory
 
 ```java
 @FindBy(css = "input.search-field")
@@ -93,7 +93,7 @@ public void buscarPor(String termo) {
 
 > A separação das responsabilidades entre Page e StepDefinition melhora a manutenção e reuso dos testes.
 
-## 🔁 Reutilização com Steps Compartilhados
+### 🔁 Reutilização com Steps Compartilhados
 
 ```java
 @Entao("devo ver artigos relacionados")
@@ -104,9 +104,9 @@ public void verificarArtigosRelacionados() {
 
 Classe: `ValidacoesComunsSteps.java`
 
-## 🛠️ Integração CI/CD com Jenkins
+### 🛠️ Integração CI/CD com Jenkins
 
-### Jenkinsfile
+#### Jenkinsfile
 
 ```groovy
 pipeline {
@@ -161,7 +161,7 @@ pipeline {
 }
 ```
 
-## 📈 Relatórios de Execução
+### 📈 Relatórios de Execução
 
 | Relatório        | Caminho/Execução                          |
 |------------------|-------------------------------------------|
@@ -169,10 +169,10 @@ pipeline {
 | Allure CLI       | `allure serve allure-results`             |
 | Jenkins Allure   | Usar plugin "Allure Jenkins Plugin"       |
 
-## 🔒 Boas práticas aplicadas
+### 🔒 Boas práticas aplicadas
 
 - ✅ Separação de responsabilidades (Pages, Steps, Features)
-- ✅ Sem repetição de código (`DRY`)
+- ✅ Sem repetição de código (`DRY` - Don't Repeat Yourself)
 - ✅ Pipelines multiplataforma (Linux/Windows)
 - ✅ Execução por tags
 - ✅ PageFactory para robustez
