@@ -36,20 +36,20 @@ blogdoagi-tests/
 
 ### 🚀 Execução Local
 
-### 1. Clonar o projeto
+#### 1. Clonar o projeto
 
 ```bash
 git clone https://github.com/seuusuario/blogdoagi-tests.git
 cd blogdoagi-tests
 ```
 
-### 2. Rodar os testes
+#### 2. Rodar os testes
 
 ```bash
 mvn clean test verify
 ```
 
-### 3. Gerar Relatório HTML (Cucumber)
+#### 3. Gerar Relatório HTML (Cucumber)
 
 ```bash
 # Após rodar:
@@ -57,7 +57,7 @@ abrir o arquivo:
 target/cucumber-html-reports/overview-features.html
 ```
 
-#### 4. Gerar Allure Report
+##### 4. Gerar Allure Report
 
 ```bash
 allure serve allure-results
