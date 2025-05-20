@@ -1,11 +1,5 @@
-# 🧪 Blog do Agi – Projeto de Testes Automatizados (PageFactory + Cucumber)
+# 🧪 Blog do Agi – Testes Automatizados (PageFactory + Cucumber)
 
-![Java](https://img.shields.io/badge/Java-21%2B-blue)
-![Maven](https://img.shields.io/badge/Maven-3.9.5-green)
-![Selenium](https://img.shields.io/badge/Selenium-4.21.0-brightgreen)
-![Cucumber](https://img.shields.io/badge/Cucumber-7.14.0-yellow)
-![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-red)
-![Allure](https://img.shields.io/badge/Allure-2.24.0-purple)
 
 ## 📌 Descrição do Projeto
 
@@ -33,14 +27,12 @@ blogdoagi-tests/
 
 ## ⚙️ Tecnologias e Versões
 
-| Ferramenta         | Versão | Descrição                                   |
-|--------------------|--------|---------------------------------------------|
-| Java               | 21+    | Linguagem base                              |
-| Maven              | 3.9.5  | Build automation tool                        |
-| Selenium WebDriver | 4.21.0 | Automação de browser                        |
-| Cucumber           | 7.14.0 | BDD com Gherkin                             |
-| Allure             | 2.24.0 | Relatórios de execução                      |
-| WebDriverManager   | 5.8.0  | Gerenciador automático do driver            |
+![Java](https://img.shields.io/badge/Java-21%2B-blue)
+![Maven](https://img.shields.io/badge/Maven-3.9.5-green)
+![Selenium](https://img.shields.io/badge/Selenium-4.21.0-brightgreen)
+![Cucumber](https://img.shields.io/badge/Cucumber-7.14.0-yellow)
+![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-red)
+![Allure](https://img.shields.io/badge/Allure-2.24.0-purple)
 
 ## 🚀 Execução Local
 
