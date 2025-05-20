@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import hooks.Hooks;
 import io.cucumber.java.pt.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;

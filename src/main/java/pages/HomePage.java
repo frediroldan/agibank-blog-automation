@@ -1,12 +1,16 @@
 package pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.Duration;
 import java.util.List;
 
 public class HomePage {
@@ -20,10 +24,10 @@ public class HomePage {
     }
 
     @FindBy(xpath = "//*[contains(text(),'Pesquisar') or @aria-label='Pesquisar']")
-    private WebElement botaoPesquisar;
+    WebElement botaoPesquisar;
 
     @FindBy(css = "input.search-field")
-    private WebElement campoBusca;
+    WebElement campoBusca;
 
     @FindBy(css = ".post-title")
     private List<WebElement> artigos;
@@ -36,12 +40,17 @@ public class HomePage {
     }
 
     public void clicarLupa() {
-        botaoPesquisar.click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(botaoPesquisar)).click();
     }
 
     public void buscarPor(String termo) {
-        campoBusca.sendKeys(termo);
-        campoBusca.submit();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(botaoPesquisar)).click();
+        wait.until(ExpectedConditions.visibilityOf(campoBusca));
+        wait.until(ExpectedConditions.elementToBeClickable(campoBusca));
+        campoBusca.clear();
+        campoBusca.sendKeys(termo + Keys.ENTER);
     }
 
     public boolean encontrouResultados() {

@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import hooks.Hooks;
 import io.cucumber.java.pt.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +12,6 @@ public class BuscaEmprestimoConsignadoSteps {
 
     WebDriver driver = Hooks.driver;
     HomePage home;
-
     private static final Logger logger = LoggerFactory.getLogger(BuscaEmprestimoConsignadoSteps.class);
 
     @Dado("que estou na página inicial do Blog do Agi")
